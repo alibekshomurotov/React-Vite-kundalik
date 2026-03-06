@@ -1,0 +1,210 @@
+/* UMUMIY SIDEBAR */
+.sidebar {
+  width: 280px;
+  background: white;
+  border-right: 1px solid #e2e8f0;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 64px;
+  bottom: 0;
+  overflow-y: auto;
+}
+
+/* O'QITUVCHI SIDEBAR */
+.teacher-sidebar {
+  background: linear-gradient(180deg, #1e293b 0%, #0f172a 100%);
+  color: white;
+  border-right: none;
+}
+
+.teacher-sidebar .sidebar-header {
+  padding: 24px;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.teacher-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.teacher-avatar {
+  width: 48px;
+  height: 48px;
+  background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.teacher-info h4 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.subject-badge {
+  font-size: 12px;
+  color: #94a3b8;
+  background: rgba(255,255,255,0.1);
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+
+.teacher-sidebar .nav-link {
+  color: #94a3b8;
+  padding: 14px 24px;
+  margin: 4px 12px;
+  border-radius: 8px;
+  transition: all 0.2s;
+}
+
+.teacher-sidebar .nav-link:hover {
+  background: rgba(255,255,255,0.05);
+  color: white;
+}
+
+.teacher-sidebar .nav-link.active {
+  background: #3b82f6;
+  color: white;
+}
+
+/* ADMIN SIDEBAR */
+.admin-sidebar {
+  background: #0f172a;
+  color: white;
+  border-right: none;
+}
+
+.admin-header {
+  padding: 24px;
+  display: flex;
+  justify-content: center;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.admin-badge {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: linear-gradient(135deg, #dc2626, #991b1b);
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.admin-sidebar .nav-link {
+  color: #94a3b8;
+  padding: 14px 24px;
+  margin: 4px 12px;
+  border-radius: 8px;
+  transition: all 0.2s;
+}
+
+.admin-sidebar .nav-link:hover {
+  background: rgba(255,255,255,0.05);
+  color: white;
+}
+
+.admin-sidebar .nav-link.active {
+  background: #dc2626;
+  color: white;
+}
+
+/* FOOTER */
+.sidebar-footer {
+  margin-top: auto;
+  padding: 16px;
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+.logout-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  padding: 12px;
+  background: rgba(239, 68, 68, 0.1);
+  color: #ef4444;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+
+.logout-link:hover {
+  background: rgba(239, 68, 68, 0.2);
+}
+
+.admin-info {
+  padding: 12px;
+  text-align: center;
+  color: #64748b;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+/* O'QUVCHI SIDEBAR (oddiy) */
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 16px 12px;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  border-radius: 8px;
+  text-decoration: none;
+  color: #64748b;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+
+.nav-link:hover {
+  background: #f1f5f9;
+  color: #1e293b;
+}
+
+.nav-link.active {
+  background: #eff6ff;
+  color: #3b82f6;
+}
+
+.version {
+  text-align: center;
+  font-size: 12px;
+  color: #94a3b8;
+  padding: 16px;
+}
+
+/* MAIN CONTENT */
+.main-content {
+  margin-left: 280px;
+  flex: 1;
+  padding: 24px;
+  overflow-y: auto;
+  min-height: calc(100vh - 64px);
+}
+
+.main-content.teacher {
+  background: #f8fafc;
+}
+
+.main-content.admin {
+  background: #f1f5f9;
+}

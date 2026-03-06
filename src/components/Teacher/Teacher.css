@@ -1,0 +1,627 @@
+.teacher-page {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .page-header-modern {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 24px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #e2e8f0;
+  }
+  
+  .header-content h1 {
+    font-size: 32px;
+    color: #1e293b;
+    margin-bottom: 4px;
+  }
+  
+  .header-content p {
+    color: #64748b;
+    font-size: 16px;
+  }
+  
+  .stat-pill {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    background: #dbeafe;
+    color: #1e40af;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 500;
+  }
+  
+  .filters-bar {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 24px;
+    flex-wrap: wrap;
+  }
+  
+  .search-box {
+    flex: 1;
+    min-width: 280px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 16px;
+    background: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    transition: all 0.2s;
+  }
+  
+  .search-box:focus-within {
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+  }
+  
+  .search-box svg {
+    color: #94a3b8;
+  }
+  
+  .search-box input {
+    flex: 1;
+    border: none;
+    background: none;
+    font-size: 14px;
+    outline: none;
+  }
+  
+  .filter-group {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 16px;
+    background: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+  }
+  
+  .filter-group svg {
+    color: #64748b;
+  }
+  
+  .filter-group select {
+    border: none;
+    background: none;
+    font-size: 14px;
+    color: #1e293b;
+    cursor: pointer;
+    outline: none;
+  }
+  
+  .teachers-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 20px;
+  }
+  
+  .teacher-card-modern {
+    background: white;
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    transition: all 0.3s;
+    position: relative;
+  }
+  
+  .teacher-card-modern:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px rgba(0,0,0,0.15);
+  }
+  
+  .teacher-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 16px;
+  }
+  
+  .teacher-avatar-large {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 24px;
+    font-weight: 600;
+    overflow: hidden;
+  }
+  
+  .teacher-avatar-large img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .teacher-badge {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px;
+    background: #fef3c7;
+    color: #92400e;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+  }
+  
+  .teacher-info h3 {
+    font-size: 18px;
+    color: #1e293b;
+    margin-bottom: 4px;
+  }
+  
+  .teacher-role {
+    color: #64748b;
+    font-size: 14px;
+    margin-bottom: 16px;
+  }
+  
+  .teacher-contacts {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 16px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #f1f5f9;
+  }
+  
+  .contact-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    color: #475569;
+  }
+  
+  .contact-item svg {
+    color: #94a3b8;
+  }
+  
+  .teacher-meta {
+    display: flex;
+    gap: 16px;
+  }
+  
+  .meta-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 13px;
+    color: #64748b;
+  }
+  
+  .meta-item svg {
+    color: #3b82f6;
+  }
+  
+  .teacher-actions {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+  }
+  
+  .action-btn {
+    width: 32px;
+    height: 32px;
+    border: none;
+    background: #f1f5f9;
+    border-radius: 8px;
+    cursor: pointer;
+    color: #64748b;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: all 0.2s;
+  }
+  
+  .teacher-card-modern:hover .action-btn {
+    opacity: 1;
+  }
+  
+  .action-btn:hover {
+    background: #e2e8f0;
+    color: #1e293b;
+  }
+  
+  .empty-state-modern {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 80px 20px;
+    color: #94a3b8;
+  }
+  
+  .empty-state-modern svg {
+    margin-bottom: 16px;
+    opacity: 0.5;
+  }
+  
+  .empty-state-modern h3 {
+    color: #64748b;
+    margin-bottom: 8px;
+  }
+
+  .teacher-page {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .page-header-modern {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 24px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #e2e8f0;
+  }
+  
+  .header-content h1 {
+    font-size: 32px;
+    color: #1e293b;
+    margin-bottom: 4px;
+  }
+  
+  .header-content p {
+    color: #64748b;
+    font-size: 16px;
+  }
+  
+  .stat-pill {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    background: #dbeafe;
+    color: #1e40af;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 500;
+  }
+  
+  .filters-bar {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 24px;
+    flex-wrap: wrap;
+  }
+  
+  .search-box {
+    flex: 1;
+    min-width: 280px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 16px;
+    background: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+  }
+  
+  .search-box input {
+    flex: 1;
+    border: none;
+    background: none;
+    font-size: 14px;
+    outline: none;
+  }
+  
+  .filter-group {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 16px;
+    background: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+  }
+  
+  .filter-group select {
+    border: none;
+    background: none;
+    font-size: 14px;
+    cursor: pointer;
+    outline: none;
+  }
+  
+  /* Teacher Schedule Modal */
+  .teacher-schedule-modal {
+    background: white;
+    border-radius: 16px;
+    padding: 24px;
+    margin-bottom: 24px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    animation: slideDown 0.3s ease;
+  }
+  
+  @keyframes slideDown {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .schedule-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #e2e8f0;
+  }
+  
+  .schedule-header h3 {
+    font-size: 20px;
+    color: #1e293b;
+    margin-bottom: 4px;
+  }
+  
+  .schedule-header p {
+    color: #64748b;
+    font-size: 14px;
+  }
+  
+  .close-schedule-btn {
+    width: 32px;
+    height: 32px;
+    border: none;
+    background: #f1f5f9;
+    border-radius: 8px;
+    cursor: pointer;
+    color: #64748b;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .close-schedule-btn:hover {
+    background: #e2e8f0;
+    color: #1e293b;
+  }
+  
+  .schedule-days {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+  }
+  
+  .schedule-day-card {
+    background: #f8fafc;
+    border-radius: 12px;
+    padding: 16px;
+    border: 1px solid #e2e8f0;
+  }
+  
+  .schedule-day-card h4 {
+    font-size: 14px;
+    color: #3b82f6;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+  
+  .day-lessons {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .lesson-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px;
+    background: white;
+    border-radius: 8px;
+    font-size: 13px;
+  }
+  
+  .lesson-number {
+    width: 20px;
+    height: 20px;
+    background: #3b82f6;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    font-weight: 700;
+  }
+  
+  .lesson-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .lesson-subject {
+    font-weight: 500;
+    color: #1e293b;
+  }
+  
+  .lesson-class {
+    font-size: 11px;
+    color: #64748b;
+  }
+  
+  .lesson-time {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    color: #94a3b8;
+    font-size: 11px;
+  }
+  
+  .no-lessons {
+    color: #94a3b8;
+    font-size: 13px;
+    font-style: italic;
+    text-align: center;
+    padding: 12px;
+  }
+  
+  /* Teachers Grid */
+  .teachers-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 20px;
+  }
+  
+  .teacher-card-modern {
+    background: white;
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    transition: all 0.3s;
+    cursor: pointer;
+    position: relative;
+  }
+  
+  .teacher-card-modern:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px rgba(0,0,0,0.15);
+  }
+  
+  .teacher-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 16px;
+  }
+  
+  .teacher-avatar-large {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 24px;
+    font-weight: 600;
+    overflow: hidden;
+  }
+  
+  .teacher-avatar-large img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .teacher-badge {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px;
+    background: #fef3c7;
+    color: #92400e;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+  }
+  
+  .teacher-info h3 {
+    font-size: 18px;
+    color: #1e293b;
+    margin-bottom: 4px;
+  }
+  
+  .teacher-role {
+    color: #64748b;
+    font-size: 14px;
+    margin-bottom: 16px;
+  }
+  
+  .teacher-contacts {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 16px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #f1f5f9;
+  }
+  
+  .contact-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    color: #475569;
+  }
+  
+  .contact-item svg {
+    color: #94a3b8;
+  }
+  
+  .teacher-meta {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 12px;
+  }
+  
+  .meta-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 13px;
+    color: #64748b;
+  }
+  
+  .meta-item svg {
+    color: #3b82f6;
+  }
+  
+  .teacher-schedule-hint {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px;
+    background: #eff6ff;
+    border-radius: 8px;
+    font-size: 13px;
+    color: #3b82f6;
+    margin-top: 12px;
+  }
+  
+  .empty-state-modern {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 80px 20px;
+    color: #94a3b8;
+  }
+  
+  .empty-state-modern svg {
+    margin-bottom: 16px;
+    opacity: 0.5;
+  }
+  
+  .empty-state-modern h3 {
+    color: #64748b;
+    margin-bottom: 8px;
+  }
+  
+  @media (max-width: 768px) {
+    .schedule-days {
+      grid-template-columns: 1fr;
+    }
+    
+    .teachers-grid {
+      grid-template-columns: 1fr;
+    }
+  }

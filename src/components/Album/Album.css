@@ -1,0 +1,295 @@
+.album-page {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .upload-section {
+    margin-bottom: 24px;
+  }
+  
+  .upload-area {
+    border: 2px dashed #cbd5e1;
+    border-radius: 12px;
+    padding: 40px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.2s;
+    margin-bottom: 16px;
+  }
+  
+  .upload-area:hover {
+    border-color: #3b82f6;
+    background: #f8fafc;
+  }
+  
+  .upload-icon {
+    color: #94a3b8;
+    margin-bottom: 12px;
+  }
+  
+  .upload-area p {
+    color: #475569;
+    font-weight: 500;
+    margin-bottom: 4px;
+  }
+  
+  .upload-area span {
+    color: #94a3b8;
+    font-size: 13px;
+  }
+  
+  .caption-input {
+    margin-top: 12px;
+  }
+  
+  .photos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+  }
+  
+  .photo-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    transition: transform 0.2s;
+  }
+  
+  .photo-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  }
+  
+  .photo-wrapper {
+    position: relative;
+    aspect-ratio: 4/3;
+    overflow: hidden;
+  }
+  
+  .photo-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s;
+  }
+  
+  .photo-card:hover .photo-wrapper img {
+    transform: scale(1.05);
+  }
+  
+  .photo-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    opacity: 0;
+    transition: opacity 0.2s;
+  }
+  
+  .photo-card:hover .photo-overlay {
+    opacity: 1;
+  }
+  
+  .overlay-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    background: white;
+    color: #1e293b;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+  }
+  
+  .overlay-btn:hover {
+    transform: scale(1.1);
+    background: #3b82f6;
+    color: white;
+  }
+  
+  .overlay-btn.delete:hover {
+    background: #ef4444;
+  }
+  
+  .photo-info {
+    padding: 16px;
+  }
+  
+  .caption {
+    font-weight: 600;
+    color: #1e293b;
+    margin-bottom: 8px;
+  }
+  
+  .photo-meta {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    color: #64748b;
+    margin-bottom: 12px;
+  }
+  
+  .photo-stats {
+    display: flex;
+    gap: 16px;
+    padding-top: 12px;
+    border-top: 1px solid #e2e8f0;
+  }
+  
+  .photo-stats span {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 13px;
+    color: #64748b;
+  }
+
+  .access-denied {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 20px;
+    color: #94a3b8;
+    text-align: center;
+  }
+  
+  .access-denied svg {
+    margin-bottom: 16px;
+    color: #ef4444;
+  }
+  
+  .access-denied h2 {
+    color: #1e293b;
+    margin-bottom: 8px;
+  }
+  
+  .album-stats {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    background: #dbeafe;
+    color: #1e40af;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 500;
+  }
+  
+  .class-tag {
+    display: inline-block;
+    margin-top: 8px;
+    padding: 4px 12px;
+    background: #f3f4f6;
+    color: #6b7280;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+  }
+  
+  .overlay-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+  }
+  
+  .overlay-btn span {
+    font-size: 12px;
+    font-weight: 600;
+  }
+
+  .visibility-selector {
+    margin-top: 16px;
+    padding-top: 16px;
+    border-top: 1px solid #e2e8f0;
+  }
+  
+  .visibility-selector label {
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    color: #374151;
+    margin-bottom: 8px;
+  }
+  
+  .visibility-options {
+    display: flex;
+    gap: 12px;
+  }
+  
+  .visibility-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 16px;
+    border: 2px solid #e2e8f0;
+    background: white;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 14px;
+    color: #64748b;
+    transition: all 0.2s;
+  }
+  
+  .visibility-btn:hover {
+    border-color: #3b82f6;
+    color: #3b82f6;
+  }
+  
+  .visibility-btn.active {
+    border-color: #3b82f6;
+    background: #eff6ff;
+    color: #3b82f6;
+  }
+  
+  .photo-badges {
+    margin-bottom: 8px;
+  }
+  
+  .badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 600;
+  }
+  
+  .global-badge {
+    background: #d1fae5;
+    color: #059669;
+  }
+  
+  .class-badge {
+    background: #dbeafe;
+    color: #1e40af;
+  }
+  
+  .like-btn {
+    color: white;
+  }
+  
+  .like-btn span {
+    font-size: 12px;
+    font-weight: 700;
+  }
+  
+  .delete-btn {
+    color: #ef4444;
+  }
+  
+  .delete-btn:hover {
+    background: #fee2e2;
+  }
